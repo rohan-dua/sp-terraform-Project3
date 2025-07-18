@@ -2,7 +2,8 @@ resource "azurerm_public_ip" "main" {
   name                = "${var.vm_name}-pip"
   resource_group_name = var.resource_group_name
   location            = var.vm_location
-  allocation_method   = "Dynamic"
+  allocation_method   = "Static"
+  sku                 = "Standard"
 
   tags = var.tags
 }
